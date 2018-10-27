@@ -8,7 +8,7 @@
   },
   "main": "build/WebServer.js",
   "scripts": {
-      "test": "nodemon .",
-      "start": "node ."
+    "test": "nodemon .",
+    "start": "node ."
   }
 }

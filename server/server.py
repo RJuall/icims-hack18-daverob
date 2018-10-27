@@ -8,7 +8,7 @@ app = tornado.web.Application([
     (r"/", MainHandler),
     (r"/test", TestHandler),
     (r"/twitter", TwitterHandler)
-], static_path="./web/build/static/")
+], static_path="../web/build/static/", debug=bool(os.environ.get("DEBUG", False)))
 
 http_server = tornado.httpserver.HTTPServer(app)
 

@@ -1,4 +1,6 @@
+import "../lib/bootstrap.min.css";
 import React from "react";
+import { HEREMap } from "react-here-maps";
 
 export class App extends React.Component{
     constructor(props){
@@ -7,9 +9,15 @@ export class App extends React.Component{
 
     render(){
         return (
-            <div>
+            <div className="container">
                 <div>
-                    React Test
+                    <HEREMap
+                        appId={"itrCtesJG8SmB2bRpsAJ"}
+                        appCode={"_2eCy3-1g4UKxTNtgRWoxQ"}
+                        center={{lat: 1, lng: 1}}
+                        zoom={14}
+                        hidpi={true}
+                    />
                 </div>
             </div>
         );

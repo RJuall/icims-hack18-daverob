@@ -1,5 +1,6 @@
 import * as http from "http";
 import * as express from "express";
+import { TwitterRoute } from "./routes/TwitterRoute";
 
 export class WebServer{
     private _app:express.Application;
@@ -15,6 +16,7 @@ export class WebServer{
 
     private createRoutes():void{
         this._app.get("", (req, res) => res.sendFile("index.html"));
+        this._app.get("/twitter", (req, res) => TwitterRoute.get(req, res));
     }
 
     private init():void{

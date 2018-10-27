@@ -2,10 +2,12 @@ import os
 import tornado.web
 import tornado.httpserver
 import tornado.ioloop
-from handlers import MainHandler
+from handlers import *
 
 app = tornado.web.Application([
-    (r"/", MainHandler)
+    (r"/", MainHandler),
+    (r"/test", TestHandler),
+    (r"/twitter", TwitterHandler)
 ], static_path="./web/build/static/")
 
 http_server = tornado.httpserver.HTTPServer(app)
